@@ -1,7 +1,7 @@
 :root {
     /* Colors */
-    --color-primary: #FF6B35;
-    --color-secondary: #FF8C5A;
+    --color-primary: #0092b8;
+    --color-secondary: #00a6f4;
     --color-dark: #111111;
     --color-text: #444444;
     --color-text-light: #888888;
@@ -174,12 +174,12 @@ main {
 .about {
     margin-top: 3rem;
     padding-top: 2rem;
-    border-top: 2px solid #e0e0e0;
+    border-top: 1px solid var(--color-border);
 }
 
 .about h2 {
     color: var(--color-dark);
-    font-size: 3rem;
+    font-size: var(--text-lg);
     margin-bottom: 1rem;
 }
 
@@ -201,7 +201,7 @@ main {
 
 .skill-card {
     flex: 1;
-    border: 2px solid var(--color-border);
+    border: 1px solid var(--color-border);
     padding: 1.5rem;
     border-radius: var(--radius);
 }
@@ -217,4 +217,118 @@ main {
     font-size: 0.95rem;
     letter-spacing: -0.5px;
     margin: 0;
+}
+
+.projects {
+    background: var(--color-white);
+    padding: 5rem 2rem;
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects h2 {
+    font-size: var(--text-xl);
+    color: var(--color-dark);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+    font-weight: 700;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--color-background);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform 0.3s; box-shadow: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.project-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient (135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.project-card h3 {
+    color: var(--color-dark);
+    font-size: 1.3rem;
+    margin: 1.5rem 1.5rem 0.5rem;
+    font-weight: 600;
+}
+
+.project-card p {
+    color: var(--color-text);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 1.5rem 1rem;
+}
+
+.project-tag {
+    display: inline-block;
+    background: var(--color-primary);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin: 0 1.5rem 1.5rem;
+}
+
+footer {
+   background: var(--color-dark);
+   color: var(white);
+   padding: 3rem 2rem;
+   margin-top: 5rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-content p {
+    color: rgba(255,255,255,0.7);
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--color-primary);
 }
